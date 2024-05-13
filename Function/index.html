@@ -1,0 +1,20 @@
+<html>
+<head>
+   <title> JavaScript - Returning function </title>
+</head>
+<body>
+   <p id = "demo"> </p>
+   <script>
+      const output = document.getElementById("demo");
+      function outer() {
+         output.innerHTML += "The outer function is executed! <br>";
+         return function inner() {
+            output.innerHTML += "The inner function is executed! <br>";
+         }
+      }
+      const func = outer();
+      func()
+      func()
+   </script>
+</body>
+</html>
